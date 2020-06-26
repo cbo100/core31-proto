@@ -21,8 +21,9 @@ jobs:
       uses: actions/setup-node@v2-beta
       with:
         node-version: '12'
-    - name: Install dependencies
+    - name: Install dotnet dep
       run: dotnet restore
+    - name: Install npm deps
       run: npm install
     - name: Build
       run: dotnet build --configuration Release --no-restore
